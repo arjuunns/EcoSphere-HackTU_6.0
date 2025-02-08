@@ -67,6 +67,7 @@ function Landing() {
           </div>
         </div>
       </section>
+      
     </div>
   );
 }

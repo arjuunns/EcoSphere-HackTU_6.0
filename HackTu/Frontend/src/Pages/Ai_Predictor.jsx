@@ -30,7 +30,7 @@ const ImageAnalyzer = () => {
 
       try {
         const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0" });
 
         const result = await model.generateContent([
           {

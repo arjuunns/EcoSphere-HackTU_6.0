@@ -17,9 +17,8 @@ function Navbar() {
           <Link to="/" className="hover:text-[#81C784] transition-colors">Home</Link>
           <Link to="/ai_predictor" className="hover:text-[#81C784] transition-colors">Get Insights</Link>
           <Link to="/dashboard" className="hover:text-[#81C784] transition-colors">Dashboard</Link>
-          <Link to="/voting" className="hover:text-[#81C784] transition-colors">Voting</Link>
-          <Link to="/greenheroes" className="hover:text-[#81C784] transition-colors">Green Heroes</Link>
-          <Link to="/issues" className="hover:text-[#81C784] transition-colors">Raise Issues</Link>
+          <Link to="/analytics" className="hover:text-[#81C784] transition-colors">Analytics</Link>
+          <Link to="/charts" className="hover:text-[#81C784] transition-colors">Graphs</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -38,9 +37,8 @@ function Navbar() {
           <Link to="/" className="block py-2 hover:text-[#81C784]">Home</Link>
           <Link to="/ai_predictor" className="block py-2 hover:text-[#81C784]">Get Insights</Link>
           <Link to="/dashboard" className="block py-2 hover:text-[#81C784]">Dashboard</Link>
-          <Link to="/voting" className="block py-2 hover:text-[#81C784]">Voting</Link>
-          <Link to="/greenheroes" className="block py-2 hover:text-[#81C784]">Green Heroes</Link>
-          <Link to="/issues" className="block py-2 hover:text-[#81C784]">Raise Issues</Link>
+          <Link to="/analytics" className="block py-2 hover:text-[#81C784]">Analytics</Link>
+          <Link to="/charts" className="block py-2 hover:text-[#81C784]">Graphs</Link>
         </div>
       )}
     </nav>
