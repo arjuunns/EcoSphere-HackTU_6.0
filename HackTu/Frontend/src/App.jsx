@@ -10,6 +10,7 @@ import Navbar from "./Pages/Navbar";
 import ChatBot from "./Pages/ChatBot";
 import HeatMap from "./Pages/HeatMap";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from "./Pages/Login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/voting" element={<Voting/>} />
         <Route path="/greenheroes" element={<GreenHeroes/>} />
         <Route path="/issues" element={<Issues/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </Router>
   );

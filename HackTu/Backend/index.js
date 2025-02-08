@@ -32,7 +32,7 @@ app.post("/data", (req, res) => {
             return res.status(400).json({ status: "error", message: "Incomplete data received" });
         }
 
-        latestDistance = `${distance} cm | Location: (${latitude}, ${longitude})`;
+        latestDistance = `${distance} | Location: (${latitude}, ${longitude})`;
         console.log(`📩 Received Distance: ${latestDistance}`);
 
         // 🔄 Broadcast to all connected clients (Auto-Reload)
@@ -69,7 +69,7 @@ app.get("/", (req, res) => {
             <script>
                 const socket = io("http://127.0.0.1:${PORT}");
                 socket.on("updateData", (data) => {
-                    document.getElementById("distance").innerText = data.distance + " cm";
+                    document.getElementById("distance").innerText = data.distance + "";
                     document.getElementById("location").innerText = "Location: (" + data.latitude + ", " + data.longitude + ")";
                 });
             </script>
@@ -102,7 +102,7 @@ function readSerialData() {
             data = data.trim();
             if (!data) return;
 
-            latestDistance = `${data} cm | Location: (${ROHINI_LAT}, ${ROHINI_LON})`;
+            latestDistance = `${data} | Location: (${ROHINI_LAT}, ${ROHINI_LON})`;
             console.log(`📡 Sending Distance: ${latestDistance}`);
 
             try {
