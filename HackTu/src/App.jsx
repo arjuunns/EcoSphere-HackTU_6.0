@@ -1,4 +1,4 @@
-import "./App.css";
+import "../src/index.css"
 import Landing from "./Pages/Landing";
 import Dashboard from "./Pages/DashBoard";
 import Ai_Predictor from "./Pages/Ai_Predictor";
