@@ -107,9 +107,54 @@ const heroes = [
       },
     ],
   },
+  {
+    name: "Michael Lee",
+    role: "Sustainability Advocate",
+    description:
+      "Founded an urban gardening initiative that has transformed unused spaces into thriving green areas, benefiting local communities.",
+    icon: () => (<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+    ></path>
+  </svg>
+  ),
+    stats: [
+      { label: "15 Community Gardens", icon: () => (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+      ),
+    },
+      { label: "500+ Trees Planted", icon: () => <svg>...</svg> },
+    ],
+  },
+  {
+    name: "Emily Davis",
+    role: "Eco-Educator",
+    description:
+      "Developed educational programs for schools, teaching thousands of students about environmental conservation and sustainability.",
+    icon: () => (<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+      ></path>
+    </svg>
+    ),
+    stats: [
+      { label: "100+ Schools Reached", icon: () => <svg>...</svg> },
+      { label: "10,000+ Students Educated", icon: () => <svg>...</svg> },
+    ],
+  },
 ];
 
 export default GreenHeroes;
-
-
-
