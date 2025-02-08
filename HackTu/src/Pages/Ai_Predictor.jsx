@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "YOUR_GEMINI_API_KEY";
+const API_KEY = import.meta.env.VITE_GEMINI_KEY;
 
 const ImageAnalyzer = () => {
   const [image, setImage] = useState(null);
@@ -12,7 +12,7 @@ const ImageAnalyzer = () => {
     const file = event.target.files[0];
     if (file) {
       setImage(file);
-      setAnalysisResult({}); // Clear previous results on new upload
+      setAnalysisResult({}); 
     }
   };
 
@@ -50,10 +50,8 @@ const ImageAnalyzer = () => {
 
         let responseText = await result.response.text();
 
-        // ✅ Remove Markdown formatting if present
         responseText = responseText.replace(/```json|```/g, "").trim();
 
-        // ✅ Parse the cleaned JSON response
         const parsedResult = JSON.parse(responseText);
         setAnalysisResult(parsedResult);
       } catch (error) {
