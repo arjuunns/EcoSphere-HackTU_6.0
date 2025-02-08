@@ -6,11 +6,13 @@ import Ai_Predictor from "./Pages/Ai_Predictor";
 import Voting from "./Pages/Voting";
 import GreenHeroes from "./Pages/GreenHeroes";
 import Issues from "./Pages/Issues";
+import Navbar from "./Pages/Navbar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<><Landing /><FeaturesSection /></>} />
         <Route path="/dashboard" element={<Dashboard/>} />
