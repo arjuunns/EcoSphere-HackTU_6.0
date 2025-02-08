@@ -29,7 +29,7 @@ const Login = () => {
                 className={`w-1/2 py-2 rounded-full transition-colors user-toggle ${activeUser === "municipality" ? "bg-[#81C784] text-white" : ""}`}
                 onClick={() => setActiveUser("municipality")}
               >
-                Municipality
+                Administrator
               </button>
             </div>
           </div>
