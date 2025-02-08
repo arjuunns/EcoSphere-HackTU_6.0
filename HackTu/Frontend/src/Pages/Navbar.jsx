@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-[#81C784]">EcoTrack</span>
+          <span className="text-2xl font-bold text-[#81C784]">EcoSphere</span>
         </div>
 
         {/* Desktop Navigation */}

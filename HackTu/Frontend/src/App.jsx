@@ -1,4 +1,4 @@
-import "../src/index.css"
+import "./index.css"
 import Landing from "./Pages/Landing";
 import FeaturesSection from "./Pages/Features_Section";
 import Dashboard from "./Pages/DashBoard";
@@ -8,6 +8,7 @@ import GreenHeroes from "./Pages/GreenHeroes";
 import Issues from "./Pages/Issues";
 import Navbar from "./Pages/Navbar";
 import ChatBot from "./Pages/ChatBot";
+import HeatMap from "./Pages/HeatMap";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       <ChatBot />
       <Routes>
         <Route path="/" element={<><Landing /><FeaturesSection /></>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
+        <Route path="/dashboard" element={<HeatMap/>} />
         <Route path="/ai_predictor" element={<Ai_Predictor/>} />
         <Route path="/voting" element={<Voting/>} />
         <Route path="/greenheroes" element={<GreenHeroes/>} />
