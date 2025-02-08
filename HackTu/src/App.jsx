@@ -7,12 +7,14 @@ import Voting from "./Pages/Voting";
 import GreenHeroes from "./Pages/GreenHeroes";
 import Issues from "./Pages/Issues";
 import Navbar from "./Pages/Navbar";
+import ChatBot from "./Pages/ChatBot";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <ChatBot />
       <Routes>
         <Route path="/" element={<><Landing /><FeaturesSection /></>} />
         <Route path="/dashboard" element={<Dashboard/>} />

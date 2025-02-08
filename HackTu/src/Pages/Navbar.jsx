@@ -15,7 +15,7 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/" className="hover:text-[#81C784] transition-colors">Home</Link>
-          <Link to="/ai_predictor" className="hover:text-[#81C784] transition-colors">AI Predictor</Link>
+          <Link to="/ai_predictor" className="hover:text-[#81C784] transition-colors">Get Insights</Link>
           <Link to="/dashboard" className="hover:text-[#81C784] transition-colors">Dashboard</Link>
           <Link to="/voting" className="hover:text-[#81C784] transition-colors">Voting</Link>
           <Link to="/greenheroes" className="hover:text-[#81C784] transition-colors">Green Heroes</Link>
@@ -36,7 +36,7 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-neutral-800 p-4">
           <Link to="/" className="block py-2 hover:text-[#81C784]">Home</Link>
-          <Link to="/ai_predictor" className="block py-2 hover:text-[#81C784]">AI Predictor</Link>
+          <Link to="/ai_predictor" className="block py-2 hover:text-[#81C784]">Get Insights</Link>
           <Link to="/dashboard" className="block py-2 hover:text-[#81C784]">Dashboard</Link>
           <Link to="/voting" className="block py-2 hover:text-[#81C784]">Voting</Link>
           <Link to="/greenheroes" className="block py-2 hover:text-[#81C784]">Green Heroes</Link>

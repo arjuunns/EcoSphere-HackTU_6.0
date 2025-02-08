@@ -12,7 +12,7 @@ const ImageAnalyzer = () => {
     const file = event.target.files[0];
     if (file) {
       setImage(file);
-      setAnalysisResult({}); 
+      setAnalysisResult({});
     }
   };
 
@@ -39,6 +39,7 @@ const ImageAnalyzer = () => {
               "material": "Material type",
               "price": "Estimated price you can get after submitting to recycling , show the cost in Indian rupees with unit as Rs/Kg",
               "ideas": ["Give 2-3 very good reuse ideas in concise bullet points"],
+              "isRecyclable": "Yes/No",
               "ways": "Ways to recycle"
             }
             Return only valid JSON, no extra text.`,
@@ -86,7 +87,9 @@ const ImageAnalyzer = () => {
                 className="w-full h-48 object-cover rounded-lg mx-auto"
               />
             ) : (
-              <p className="text-green-700 font-medium">📸 Click to Upload Image</p>
+              <p className="text-green-700 font-medium">
+                📸 Click to Upload Image
+              </p>
             )}
           </div>
         </label>
@@ -108,18 +111,31 @@ const ImageAnalyzer = () => {
 
         {analysisResult.material && (
           <div className="mt-6 p-4 bg-green-50 border-l-4 border-green-600 text-left rounded-lg">
-            <h3 className="text-lg font-semibold text-green-700 mb-2">♻️ Analysis Result:</h3>
+            <h3 className="text-lg font-semibold text-green-700 mb-2">
+              ♻️ Analysis Result:
+            </h3>
+            <li>
+              <strong>🔄 Recyclable:</strong> {analysisResult.isRecyclable}
+            </li>
             <ul className="text-gray-800 space-y-2">
-              <li><strong>🛠 Material:</strong> {analysisResult.material}</li>
-              <li><strong>💰 Price:</strong> {analysisResult.price}</li>
-              <li><strong>🧠 Ideas to Reuse:</strong>
+              <li>
+                <strong>🛠 Material:</strong> {analysisResult.material}
+              </li>
+              <li>
+                <strong>💰 Price:</strong> {analysisResult.price}
+              </li>
+              <li>
+                <strong>🧠 Ideas to Reuse:</strong>
                 <ul className="list-disc list-inside ml-4">
-                  {analysisResult.ideas && analysisResult.ideas.map((idea, index) => (
-                    <li key={index}> {idea}</li>
-                  ))}
+                  {analysisResult.ideas &&
+                    analysisResult.ideas.map((idea, index) => (
+                      <li key={index}> {idea}</li>
+                    ))}
                 </ul>
               </li>
-              <li><strong>🔄 Ways to Recycle:</strong> {analysisResult.ways}</li>
+              <li>
+                <strong>🔄 Ways to Recycle:</strong> {analysisResult.ways}
+              </li>
             </ul>
           </div>
         )}
