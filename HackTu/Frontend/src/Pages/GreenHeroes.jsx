@@ -36,7 +36,7 @@ const GreenHeroes = () => {
                 <div className="flex items-center gap-4 text-sm text-neutral-500">
                   {hero.stats.map((stat, i) => (
                     <span key={i} className="flex items-center gap-1">
-                      <stat.icon className="h-4 w-4" />
+                      <div className="w-10 h-10"><stat.icon className="h-4 w-4" /></div>
                       {stat.label}
                     </span>
                   ))}

@@ -68,7 +68,7 @@ const ImageAnalyzer = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] p-6 bg-gray-100">
       <div className="bg-neutral-100 border-2 shadow-xl rounded-lg p-8 max-w-md w-full text-center">
-        <h2 className="text-3xl font-bold text-green-500 mb-4">
+        <h2 className="text-3xl font-bold text-green-700 mb-4">
           ♻️ Recyclability Analyzer
         </h2>
 
@@ -79,7 +79,7 @@ const ImageAnalyzer = () => {
             onChange={handleImageUpload}
             className="hidden"
           />
-          <div className="border-2 border-dashed border-green-600 p-6 rounded-lg hover:bg-gray-300 transition">
+          <div className="border-2 border-dashed border-green-600 p-6 rounded-lg hover:bg-gray-200 transition">
             {image ? (
               <img
                 src={URL.createObjectURL(image)}
@@ -87,7 +87,7 @@ const ImageAnalyzer = () => {
                 className="w-full h-48 object-cover rounded-lg mx-auto"
               />
             ) : (
-              <p className="text-green-400 font-medium">
+              <p className="text-green-700 font-medium">
                 📸 Click to Upload Image
               </p>
             )}
