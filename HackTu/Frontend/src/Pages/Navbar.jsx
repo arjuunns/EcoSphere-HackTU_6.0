@@ -20,8 +20,8 @@ function Navbar() {
         <div className="hidden md:flex items-center space-x-6 text-lg">
           <NavLink to="/" text="Home" location={location} />
           <NavLink to="/dashboard" text="HeatMap" location={location} />
-          <NavLink to="/ai_predictor" text="Recyclability Analyzer" location={location} />
           <NavLink to="/charts" text="Analytics" location={location} />
+          <NavLink to="/ai_predictor" text="Recyclability Analyzer" location={location} />
         </div>
 
         {/* Mobile Menu Button */}
@@ -46,8 +46,8 @@ function Navbar() {
       >
         <NavLink to="/" text="Home" location={location} mobile />
         <NavLink to="/dashboard" text="HeatMap" location={location} mobile />
-        <NavLink to="/ai_predictor" text="Recyclability Analyzer" location={location} mobile />
         <NavLink to="/charts" text="Analytics" location={location} mobile />
+        <NavLink to="/ai_predictor" text="Recyclability Analyzer" location={location} mobile />
       </div>
     </nav>
   );

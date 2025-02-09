@@ -15,7 +15,6 @@ function DashBoard() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Main Dashboard Preview */}
           <div className="animate__animated animate__fadeInLeft rounded-xl bg-white p-6 shadow-lg lg:col-span-2">
             <div className="mb-4 rounded-lg bg-neutral-900 p-4">
               <div className="mb-4 flex items-center justify-between">
@@ -58,7 +57,6 @@ function DashBoard() {
             </div>
           </div>
 
-          {/* Sidebar Stats */}
           <div className="animate__animated animate__fadeInRight space-y-4">
             <div className="rounded-xl bg-white p-6 shadow-lg">
               <h3 className="mb-4 font-semibold">Key Metrics</h3>

@@ -20,7 +20,6 @@ const HeatmapLayer = ({ points }) => {
     useEffect(() => {
         if (!map || points.length === 0) return;
 
-        // Remove existing heatmap layer before adding a new one
         if (layerRef.current) {
             map.removeLayer(layerRef.current);
         }
@@ -69,7 +68,6 @@ const DelhiHeatmap = () => {
                     intensity
                 };
 
-                // 🎯 Add 4 static high-intensity points around the same area
                 const staticPoints = [
                     { lat: 28.7371, lng: 77.0850, intensity: 1 }, // 🔴 High Intensity
                     { lat: 28.7355, lng: 77.0802, intensity: 0.7 }, // 🔴 High Intensity

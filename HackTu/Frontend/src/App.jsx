@@ -6,6 +6,7 @@ import Ai_Predictor from "./Pages/Ai_Predictor";
 import Analytics from "./Pages/Analytics";
 import GreenHeroes from "./Pages/GreenHeroes";
 import Navbar from "./Pages/Navbar";
+import ChandniChowkBins from "./Pages/ChandniChowkBins";
 import ChatBot from "./Pages/ChatBot";
 import HeatMap from "./Pages/HeatMap";
 import Charts from "./Pages/Charts";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/dashboard" element={<HeatMap/>} />
         <Route path="/ai_predictor" element={<Ai_Predictor/>} />
         <Route path="/analytics" element={<Analytics/>} />
+        <Route path="/bins/chandni-chowk" element={<ChandniChowkBins />} />
         <Route path="/greenheroes" element={<GreenHeroes/>} />
         <Route path="/charts" element={<Charts/>} />
       </Routes>

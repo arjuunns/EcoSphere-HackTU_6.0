@@ -24,7 +24,7 @@ const VoiceflowChat = () => {
     };
   }, []);
 
-  return null; // No UI needed, just injects the chat widget
+  return null; 
 };
 
 export default VoiceflowChat;
