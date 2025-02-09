@@ -29,7 +29,7 @@ const ImageAnalyzer = () => {
       const base64Image = reader.result.split(",")[1];
 
       try {
-        const genAI = new GoogleGenerativeAI(API_KEY);
+        const genAI = new GoogleGenerativeAI("AIzaSyAYW-bGgXFGAWu6cTu2CCeK5GxI8-YdY7w");
         const model = await genAI.getGenerativeModel({
           model: "gemini-2.0-flash",
         });

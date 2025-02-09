@@ -5,7 +5,6 @@ import Dashboard from "./Pages/DashBoard";
 import Ai_Predictor from "./Pages/Ai_Predictor";
 import Analytics from "./Pages/Analytics";
 import GreenHeroes from "./Pages/GreenHeroes";
-import Issues from "./Pages/Issues";
 import Navbar from "./Pages/Navbar";
 import ChatBot from "./Pages/ChatBot";
 import HeatMap from "./Pages/HeatMap";
