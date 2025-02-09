@@ -85,7 +85,7 @@ const WasteAnalyticsDashboard = () => {
       {/* Map Image + Bins by Location */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white p-4 rounded-lg shadow-md flex justify-center">
-          <img src="../../public/Screenshot_2025-02-09_055212-removebg-preview.png" alt="Map" className="w-[350px] h-[350px] rounded-md" />
+          <img src="../Screenshot_2025-02-09_055212-removebg-preview.png" alt="Map" className="w-[350px] h-[350px] rounded-md" />
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-md font-semibold mb-2 text-center">Bins by Location</h2>
