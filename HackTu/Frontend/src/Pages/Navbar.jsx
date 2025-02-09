@@ -15,10 +15,10 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/" className="hover:text-[#81C784] transition-colors">Home</Link>
-          <Link to="/ai_predictor" className="hover:text-[#81C784] transition-colors">Get Insights</Link>
           <Link to="/dashboard" className="hover:text-[#81C784] transition-colors">Dashboard</Link>
-          <Link to="/analytics" className="hover:text-[#81C784] transition-colors">Analytics</Link>
-          <Link to="/charts" className="hover:text-[#81C784] transition-colors">Graphs</Link>
+          <Link to="/ai_predictor" className="hover:text-[#81C784] transition-colors">Get Insights</Link>
+          {/* <Link to="/analytics" className="hover:text-[#81C784] transition-colors">Analytics</Link> */}
+          <Link to="/charts" className="hover:text-[#81C784] transition-colors">Analytics</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -35,10 +35,10 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-neutral-800 p-4">
           <Link to="/" className="block py-2 hover:text-[#81C784]">Home</Link>
-          <Link to="/ai_predictor" className="block py-2 hover:text-[#81C784]">Get Insights</Link>
           <Link to="/dashboard" className="block py-2 hover:text-[#81C784]">Dashboard</Link>
-          <Link to="/analytics" className="block py-2 hover:text-[#81C784]">Analytics</Link>
-          <Link to="/charts" className="block py-2 hover:text-[#81C784]">Graphs</Link>
+          <Link to="/ai_predictor" className="block py-2 hover:text-[#81C784]">Get Insights</Link>
+          {/* <Link to="/analytics" className="block py-2 hover:text-[#81C784]">Analytics</Link> */}
+          <Link to="/charts" className="block py-2 hover:text-[#81C784]">Analytics</Link>
         </div>
       )}
     </nav>

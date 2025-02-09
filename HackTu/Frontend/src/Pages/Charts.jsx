@@ -11,8 +11,8 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ScatterChart,
-  Scatter,
+  LineChart,
+  Line,
 } from "recharts";
 
 const WasteAnalyticsDashboard = () => {
@@ -55,7 +55,7 @@ const WasteAnalyticsDashboard = () => {
     { name: "Non-Recyclable Waste", value: 40 },
   ];
 
-  const scatterData = [
+  const lineData = [
     { time: "6 AM", efficiency: 80 },
     { time: "9 AM", efficiency: 70 },
     { time: "12 PM", efficiency: 60 },
@@ -68,6 +68,7 @@ const WasteAnalyticsDashboard = () => {
 
   return (
     <div className="p-6 space-y-6 w-full">
+      {/* Summary Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <h2 className="text-lg font-semibold mb-2">Total Bins</h2>
@@ -81,8 +82,11 @@ const WasteAnalyticsDashboard = () => {
         </div>
       </div>
 
+      {/* Map Image + Bins by Location */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Bar Chart - Bins by Location with Current Fill Percentage */}
+        <div className="bg-white p-4 rounded-lg shadow-md flex justify-center">
+          <img src="../../public/Screenshot_2025-02-09_055212-removebg-preview.png" alt="Map" className="w-[350px] h-[350px] rounded-md" />
+        </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-md font-semibold mb-2 text-center">Bins by Location</h2>
           <ResponsiveContainer width="100%" height={250}>
@@ -97,8 +101,41 @@ const WasteAnalyticsDashboard = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </div>
 
-        {/* Pie Chart - Recyclable vs. Non-Recyclable Waste */}
+      {/* Waste Contribution by Area + Time to Full Capacity */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-md font-semibold mb-2 text-center">Waste Contribution by Area</h2>
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart data={binData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="locality" />
+              <YAxis domain={[0, 100]} />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="wastePercentage" fill="#FFBB28" name="Waste Contribution (%)" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-md font-semibold mb-2 text-center">Average Time to Full Capacity</h2>
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart data={binData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="locality" />
+              <YAxis domain={[0, 24]} />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="avgTimeToFull" fill="#FF8042" name="Avg Time to Full (hours)" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      {/* Recyclable Waste + Optimal Garbage Collection Timing (as Line Chart) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-md font-semibold mb-2 text-center">Recyclable vs. Non-Recyclable Waste</h2>
           <ResponsiveContainer width="100%" height={250}>
@@ -114,47 +151,17 @@ const WasteAnalyticsDashboard = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Bar Chart - Waste Contribution by Area */}
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <h2 className="text-md font-semibold mb-2 text-center">Waste Contribution by Area</h2>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={binData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="locality" />
-              <YAxis domain={[0, 100]} />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="wastePercentage" fill="#FFBB28" name="Waste Contribution (%)" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-
-        {/* Bar Chart - Average Time to Full Capacity */}
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h2 className="text-md font-semibold mb-2 text-center">Average Time to Full Capacity</h2>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={binData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="locality" />
-              <YAxis domain={[0, 24]} />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="avgTimeToFull" fill="#FF8042" name="Avg Time to Full (hours)" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-
-        {/* Scatter Chart - Optimal Garbage Collection Timing */}
-        <div className="bg-white p-4 rounded-lg shadow-md col-span-2">
           <h2 className="text-md font-semibold mb-2 text-center">Optimal Garbage Collection Timing</h2>
           <ResponsiveContainer width="100%" height={250}>
-            <ScatterChart>
+            <LineChart data={lineData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="time" />
-              <YAxis dataKey="efficiency" domain={[50, 100]} />
+              <YAxis domain={[50, 100]} />
               <Tooltip />
-              <Scatter name="Efficiency" data={scatterData} fill="#8884d8" />
-            </ScatterChart>
+              <Legend />
+              <Line type="monotone" dataKey="efficiency" stroke="#8884d8" />
+            </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
