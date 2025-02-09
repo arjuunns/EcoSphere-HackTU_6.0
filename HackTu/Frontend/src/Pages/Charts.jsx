@@ -166,6 +166,19 @@ const WasteAnalyticsDashboard = () => {
             </PieChart>
           </ResponsiveContainer>
         </div>
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-md font-semibold mb-2 text-center">Waste Collection Efficiency Over Time</h2>
+          <ResponsiveContainer width="100%" height={250}>
+            <LineChart data={lineData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="time" />
+              <YAxis domain={[50, 100]} />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="efficiency" stroke="#FF8042" strokeWidth={2} name="Collection Efficiency (%)" />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );
