@@ -10,7 +10,7 @@ Urban areas generate **massive amounts of waste** daily, leading to:
 - Overflowing garbage bins causing **health hazards and pollution**.  
 - Inefficient **waste collection schedules**, increasing operational costs.  
 - Lack of **public awareness and participation** in waste management.  
-
+- This results in increased pollution, health hazards, and a growing carbon footprint.
 ---
 
 ## ✅ Our Solution  
@@ -31,7 +31,7 @@ A **real-time monitoring system** that:
 - **Recyclable vs. Non-Recyclable Waste:** Pie chart representation.  
 - **Waste Contribution by Area:** Bar chart displaying the percentage of waste generated in different locations.  
 
-### 🗺️ **Heatmap for High-Waste Areas**  
+### 🔥 **Heatmap for High-Waste Areas**  
 - Visual representation of waste distribution in different regions.  
 - Identifies hotspots for **overflowing bins** and inefficient collection points.  
 
@@ -48,6 +48,19 @@ A **real-time monitoring system** that:
 - If bin height **exceeds 20cm, fill percentage is set to 0.**  
 - **Gradual increase** in waste percentage to prevent drastic fluctuations.  
 
+### 🤖 AI Chatbot (Voice-Enabled)
+-  📏 Carbon Footprint Calculator: Estimates your environmental impact based on waste disposal habits.
+-  🏪 Nearest Recycling Center Locator: Helps users find nearby facilities.
+-  🏆 Recycling Tips & Suggestions: Educates users on proper waste segregation and eco-friendly practices.
+-  🎙️ Voice Interaction: Users can ask questions and receive responses via voice.
+
+### 🛠️ Technologies Used
+-  Frontend: React.js, Recharts (for data visualization)
+-  Backend: Node.js, Express.js
+-  Database: MongoDB (for tracking user contributions in the Green Heroes program)
+- Hardware: Arduino, HC-SR04 Ultrasonic Sensor, 4-Pin UV Sensor
+- AI & APIs: Google Vision API (for recyclability analysis), OpenAI (for chatbot), Google Maps API (for recycling center location)
+-  Voice Recognition: Web Speech API / Speech-to-Text API
 ---
 ## Images
 ![download](https://github.com/user-attachments/assets/41456cfb-96ab-41b2-8676-f876347ede8c)
@@ -66,12 +79,7 @@ A **real-time monitoring system** that:
 
 ![Screenshot 2025-02-10 192733](https://github.com/user-attachments/assets/17b5ed8d-09d8-48ab-83d1-e0a523c259d2)
 
+![image](https://github.com/user-attachments/assets/e1a2b78d-dec1-48da-8287-24324a4af279)
 
-## 🛠️ Installation & Setup  
 
-### 1️⃣ Clone the Repository  
-
-```bash
-git clone https://github.com/yourusername/waste-analytics-dashboard.git
-cd waste-analytics-dashboard
 
