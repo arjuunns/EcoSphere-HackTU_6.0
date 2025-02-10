@@ -1,6 +1,6 @@
 # ♻️ Waste Analytics Dashboard  
 
-A smart waste management dashboard for monitoring urban waste trends, optimizing collection schedules, and promoting sustainability.
+A smart IOT based waste management dashboard for monitoring urban waste trends, optimizing collection schedules, and promoting sustainability.
 
 ---
 
@@ -46,7 +46,11 @@ A **real-time monitoring system** that:
 ### 📍 **Chandni Chowk Dynamic Data**  
 - **Fill percentage adjusts based on sensor readings.**  
 - If bin height **exceeds 20cm, fill percentage is set to 0.**  
-- **Gradual increase** in waste percentage to prevent drastic fluctuations.  
+- **Gradual increase** in waste percentage to prevent drastic fluctuations.
+
+- Video for Demonstration
+
+https://github.com/user-attachments/assets/0130150c-5280-4cae-b9fd-29965bba2d4b
 
 ### 🤖 AI Chatbot (Voice-Enabled)
 -  📏 Carbon Footprint Calculator: Estimates your environmental impact based on waste disposal habits.
