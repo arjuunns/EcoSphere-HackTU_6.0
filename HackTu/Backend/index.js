@@ -4,27 +4,23 @@ const { SerialPort } = require("serialport");
 const { ReadlineParser } = require("@serialport/parser-readline");
 const axios = require("axios");
 const http = require("http");
-const { Server } = require("socket.io");
 
-// 🌍 Server Configuration
 const PORT = 3000;
-const ARDUINO_PORT = "COM3"; // Change for Linux (e.g., "/dev/ttyUSB0")
+const ARDUINO_PORT = "COM3"; 
 const BAUD_RATE = 9600;
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// 🔄 Global Data Storage
+
 let latestDistance = "No data received yet";
 const ROHINI_LAT = 28.7361;
 const ROHINI_LON = 77.0825;
 
-// 🚀 API Endpoint: Receive Data (POST)
 app.post("/data", (req, res) => {
     try {
         const { distance, latitude, longitude } = req.body;
@@ -35,8 +31,6 @@ app.post("/data", (req, res) => {
         latestDistance = `${distance} | Location: (${latitude}, ${longitude})`;
         console.log(`📩 Received Distance: ${latestDistance}`);
 
-        // 🔄 Broadcast to all connected clients (Auto-Reload)
-        io.emit("updateData", { distance, latitude, longitude });
 
         res.status(200).json({
             status: "success",
@@ -50,7 +44,6 @@ app.post("/data", (req, res) => {
     }
 });
 
-// 🔍 API Endpoint: Fetch Latest Data (GET)
 app.get("/data", (req, res) => {
     res.json({
         status: "success",
@@ -60,35 +53,17 @@ app.get("/data", (req, res) => {
     });
 });
 
-// 🌐 Serve a WebSocket-based HTML Page for Live Updates
 app.get("/", (req, res) => {
-    res.send(`
-        <html>
-        <head>
-            <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
-            <script>
-                const socket = io("http://127.0.0.1:${PORT}");
-                socket.on("updateData", (data) => {
-                    document.getElementById("distance").innerText = data.distance + "";
-                    document.getElementById("location").innerText = "Location: (" + data.latitude + ", " + data.longitude + ")";
-                });
-            </script>
-        </head>
-        <body>
-            <h1>Real-Time Distance Monitoring</h1>
-            <h2 id="distance">${latestDistance}</h2>
-            <h3 id="location">Location: (${ROHINI_LAT}, ${ROHINI_LON})</h3>
-        </body>
-        </html>
-    `);
+    res.json({
+        status: "success",
+        message: "Server is running",
+    });
 });
 
-// 🎬 Start Express & WebSocket Server
 server.listen(PORT, () => {
     console.log(`🚀 Server running at http://127.0.0.1:${PORT}`);
 });
 
-// 🔌 Function to Read Data from Arduino Serial Port
 function readSerialData() {
     try {
         const serialPort = new SerialPort({ path: ARDUINO_PORT, baudRate: BAUD_RATE });
@@ -128,5 +103,4 @@ function readSerialData() {
     }
 }
 
-// 📡 Start Serial Port Listener
 readSerialData();
