@@ -59,12 +59,10 @@ https://github.com/user-attachments/assets/0130150c-5280-4cae-b9fd-29965bba2d4b
 -  🎙️ Voice Interaction: Users can ask questions and receive responses via voice.
 
 ### 🛠️ Technologies Used
--  Frontend: React.js, Recharts (for data visualization)
+-  Frontend: React.js, Tailwind, Recharts (for data visualization)
 -  Backend: Node.js, Express.js
--  Database: MongoDB (for tracking user contributions in the Green Heroes program)
-- Hardware: Arduino, HC-SR04 Ultrasonic Sensor, 4-Pin UV Sensor
+- Hardware: Arduino, HC-SR04 Ultrasonic Sensor
 - AI & APIs: Google Vision API (for recyclability analysis), OpenAI (for chatbot), Google Maps API (for recycling center location)
--  Voice Recognition: Web Speech API / Speech-to-Text API
 ---
 ## Images
 ![download](https://github.com/user-attachments/assets/41456cfb-96ab-41b2-8676-f876347ede8c)
